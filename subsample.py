@@ -87,8 +87,9 @@ def main():
     common.close_files(infile, outfile)
 
 
-def subsample(infile, outfile, subsample_rate=0.01, delimiter=',',
-    key_column=None, seed=None):
+def subsample(
+    infile, outfile, subsample_rate=0.01, delimiter=',', key_column=None,
+    seed=None):
     """
     Write later, if module interface is needed.
     """
