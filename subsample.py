@@ -91,7 +91,24 @@ def subsample(
     infile, outfile, subsample_rate=0.01, delimiter=',', key_column=None,
     seed=None):
     """
-    Write later, if module interface is needed.
+    Subsample infile and write to outfile.
+
+    Parameters
+    ----------
+    infile : File open in read mode
+        File should be delimited text and have a header
+    outfile : File open in write mode
+        Output is written here
+    subsample_rate : Real number in the interval [0, 1]
+        Keep this fraction of rows/key-values
+    delimiter : Single character string
+        The delimiter of infile.  Also used for outfile.
+    key_column : String
+        A column name.  
+        If given, subsample in the space of values of key_column.
+        Otherwise, subsample in the space of rows.
+    seed : Integer
+        If given, use this to seed the random number generator.
     """
     ## Seed the random number generator for deterministic results
     if seed:
